@@ -1,0 +1,43 @@
+<div class="container">
+  <h4 class="titl text-center pt-5">Why Families Love The Robot Garage</h4>
+  <div class="swiper">
+    <div class="swiper-wrapper d-flex align-items-center mb-5">
+      {% for i in (0..9) %}
+        <div class="swiper-slide">
+          <div class="container py-4">
+            <div class="row text-center">
+              <div class="col-6 swiper-col">
+                <div class="mb-3">
+                  <img class="" src="../assets/stars.png" alt="">
+                </div>
+                <div>
+                  <p>
+                    “Very fun! I have been so impressed to see my kid build such complex stuff. Highly highly
+                    recommend!”
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Swiper Section",
+  "tag": "section",
+  "class": "index-swiper",
+  "settings": [],
+  "presets": [
+    {
+      "name": "Swiper",
+      "category": "Content"
+    }
+  ]
+}
+{% endschema %}

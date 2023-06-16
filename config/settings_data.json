@@ -67,39 +67,6 @@
       "footer": {
         "type": "footer",
         "settings": {
-          "fluid_footer": false,
-          "footer_top_bg_color": "#faf4f0",
-          "footer_top_txt_color": "#000000",
-          "footer_top_link_color": "#000000",
-          "footer_bottom_bg_color": "#faf4f0",
-          "footer_bottom_txt_color": "#000000",
-          "footer_logo_svg": "https:\/\/cdn.shopify.com\/s\/files\/1\/0581\/7663\/5061\/files\/logo-fluid.svg?v=1631096036",
-          "logo_max_width": 180,
-          "col_1_text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam pulvinar ac tortor imperdiet commodo.<\/p>",
-          "col_2_heading": "Customer Care",
-          "footer_linklist_col_2": "main-menu",
-          "col_3_heading": "Info",
-          "footer_linklist_col_3": "learn",
-          "col_4_heading": "Discover",
-          "footer_linklist_col_4": "footer-menu",
-          "col_5_heading": "Subscribe",
-          "col_5_txt": "Get monthly updates and free resources.",
-          "show_newsletter": true,
-          "show_social_links": true,
-          "col_5_social_heading": "Connect with Us",
-          "social_icon_facebook": true,
-          "social_icon_twitter": true,
-          "social_icon_instagram": true,
-          "social_icon_youtube": true,
-          "bottom_footer_linklist": "bottom-footer-nav",
-          "show_payment_icons": true,
-          "payment_icon_visa": true,
-          "payment_icon_mastercard": true,
-          "payment_icon_ae": true,
-          "payment_icon_diners": true,
-          "payment_icon_paypal": true,
-          "payment_icon_applepay": true,
-          "payment_icon_amazonpay": true
         }
       },
       "newsletter": {
@@ -144,17 +111,6 @@
       "search-layer": {
         "type": "search-layer",
         "settings": {
-        }
-      },
-      "top-header": {
-        "type": "top-header",
-        "settings": {
-          "topbar_enabled": true,
-          "topbar_text": "SAME DAY SHIPPING! ORDER BY 2PM (EASTERN TIME)",
-          "topbar_bg_color": "#D29C7D",
-          "topbar_text_color": "#ffffff",
-          "topbar_height": 40,
-          "topbar_font_size": "15px"
         }
       }
     },

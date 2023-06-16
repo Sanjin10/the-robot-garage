@@ -6,6 +6,23 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="theme-color" content="">
     <link rel="canonical" href="{{ canonical_url }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    >
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    >
+    <script src="https://kit.fontawesome.com/370750ffaf.js" crossorigin="anonymous" async></script>
+    <script src="../assets/swiper.js" type="module"></script>
 
     {%- render 'preload-script' -%}
 
@@ -35,19 +52,21 @@
 
     {%- render 'styles-tags' -%}
 
-    <script>document.documentElement.className = document.documentElement.className.replace('no-js', 'js');</script>
-
+    <script>
+      document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+    </script>
   </head>
 
   <body class="template-{{ template.name }}">
-    
-    <a class="skip-to-content-link button visually-hidden-skip" href="#MainContent" title="{{ "accessibility.skip_to_text" | t }}">
-      {{ "accessibility.skip_to_text" | t }}
+    <a
+      class="skip-to-content-link button visually-hidden-skip"
+      href="#MainContent"
+      title="{{ "accessibility.skip_to_text" | t }}"
+    >
+      {{ 'accessibility.skip_to_text' | t }}
     </a>
 
     <site-overlay class="d-block" id="site-overlay"></site-overlay>
-  
-    {% section 'top-header' %}
 
     {% section 'header' %}
 
@@ -57,7 +76,6 @@
 
     {%- section 'newsletter' -%}
 
-    
     <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
       {{ content_for_layout }}
     </main>
@@ -67,24 +85,26 @@
     {% endif %}
 
     {% if settings.enable_quickshop %}
-      <quick-shop>
-        
-      </quick-shop>
+      <quick-shop> </quick-shop>
     {% endif %}
 
     <modal-dialog id="PopupModal-video">
       <div class="modal" role="dialog">
-          <div class="modal-dialog modal-dialog-centered" data-customVideoPopup>
-            <div class="modal-content">
-              <div class="modal-head">
-                <button class="btn p-2 close-quickshop" type="button" id="ModalClose-video" aria-label="{{ 'sections.video-with-text.close_video' | t }}">
-                  <span class="icon-close"></span>
-                </button>
-              </div>
-              <div class="modal-body video-section">
-              </div>
+        <div class="modal-dialog modal-dialog-centered" data-customVideoPopup>
+          <div class="modal-content">
+            <div class="modal-head">
+              <button
+                class="btn p-2 close-quickshop"
+                type="button"
+                id="ModalClose-video"
+                aria-label="{{ 'sections.video-with-text.close_video' | t }}"
+              >
+                <span class="icon-close"></span>
+              </button>
             </div>
+            <div class="modal-body video-section"></div>
           </div>
+        </div>
       </div>
     </modal-dialog>
 
@@ -117,6 +137,27 @@
     </ul>
 
     <script type="text/javascript">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       window.globalVariables = {
         cart: {{ cart | json }},
         product: {%- if template.name == 'product' -%}{{ product | json }}{%- else -%}{}{%- endif -%},
@@ -149,6 +190,27 @@
         soldOut: `{{ 'products.product.sold_out' | t }}`,
         unavailable: `{{ 'products.product.unavailable' | t }}`,
       }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     </script>
 
     {% if settings.enable_login_helper %}
@@ -177,7 +239,7 @@
     {%- render 'script-tags' -%}
 
     {% if template.name != 'product' and template.name != 'cart' %}
-    <script type="text/javascript" defer>
+      <script type="text/javascript" defer>
         (function manageDynamicCheckoutJS() {
           let checkoutBtn = document.querySelector('#additional-checkout-buttons');
           if (checkoutBtn != null) {
@@ -187,9 +249,9 @@
                   let checkoutScript = document.createElement('script');
                   let paymentTarget = document.querySelector('[data-source-attribution="shopify.dynamic-checkout"]');
                   checkoutScript.integrity = paymentTarget.getAttribute('integrity');
-                  checkoutScript.setAttribute('data-source-attribution', "shopify.dynamic-checkout");
+                  checkoutScript.setAttribute('data-source-attribution', 'shopify.dynamic-checkout');
                   checkoutScript.src = paymentTarget.getAttribute('src');
-                  checkoutScript.setAttribute('crossorigin', "anonymous");
+                  checkoutScript.setAttribute('crossorigin', 'anonymous');
                   document.head.appendChild(checkoutScript);
                   observer.disconnect();
                 }
@@ -199,7 +261,7 @@
             observer.observe(checkoutBtn);
           }
         })();
-    </script>
+      </script>
     {% endif %}
-</body>
+  </body>
 </html>
