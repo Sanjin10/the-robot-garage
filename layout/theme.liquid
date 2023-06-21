@@ -23,6 +23,7 @@
     >
     <script src="https://kit.fontawesome.com/370750ffaf.js" crossorigin="anonymous" async></script>
     <script src="../assets/swiper.js" type="module"></script>
+    <script src="../assets/swiper1.js" type="module"></script>
 
     {%- render 'preload-script' -%}
 
@@ -159,6 +160,7 @@
       
       
       
+      
       window.globalVariables = {
         cart: {{ cart | json }},
         product: {%- if template.name == 'product' -%}{{ product | json }}{%- else -%}{}{%- endif -%},
@@ -191,6 +193,7 @@
         soldOut: `{{ 'products.product.sold_out' | t }}`,
         unavailable: `{{ 'products.product.unavailable' | t }}`,
       }
+
 
 
 

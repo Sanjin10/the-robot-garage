@@ -67,6 +67,7 @@
           "type": "plans_block",
           "settings": {
             "accent_color": "green",
+            "cardage_text": "",
             "title": "Young Engineers",
             "image": "shopify:\/\/shop_images\/Robot_Garage_16x9-11_2x_b5032fd0-7459-49d5-b124-3c9fe2225889.png",
             "price": "$79\/mo",
@@ -80,6 +81,7 @@
           "type": "plans_block",
           "settings": {
             "accent_color": "red",
+            "cardage_text": "",
             "title": "Robot Academy Jr.",
             "image": "shopify:\/\/shop_images\/Robot_Garage_16x9-17_2x_e4993387-2c25-4820-a512-7dabf2aa46a8.png",
             "price": "$79\/mo",
@@ -93,6 +95,7 @@
           "type": "plans_block",
           "settings": {
             "accent_color": "yellow",
+            "cardage_text": "",
             "title": "Video Game Design",
             "image": "shopify:\/\/shop_images\/6c8e4f_a7a95216f3714269a7ce949e5d0bd942_mv2_2x_d38d6287-7581-47d6-bb7b-0320d2687fe1.png",
             "price": "$29\/mo",
@@ -125,6 +128,21 @@
         "text": "We offer birthday parties, field trips, classes, camps, and more in our Birmingham and Rochester Hills locations.",
         "text2": "Check them all out!"
       }
+    },
+    "54b763e5-ddd9-4607-8387-12da97eb7b84": {
+      "type": "follow-us",
+      "settings": {
+      }
+    },
+    "5f659ec3-efb5-4bc7-bc03-f404e6ff7938": {
+      "type": "last-section",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Group_1064_2x_cae582ac-ba9e-4655-91ad-13369d14a353.png",
+        "icons": "shopify:\/\/shop_images\/Component_30_3_2x_f7a04ced-2244-40a4-98b4-26635f0e9973.png",
+        "icons2": "shopify:\/\/shop_images\/Group_1004_2x_6d2ccd1b-6c03-4f31-8bd2-24001434aa8a.png",
+        "icons3": "shopify:\/\/shop_images\/Group_1005_2x_d9400db2-a2f7-4104-a9b0-252ab9a196a2.png",
+        "icons4": "shopify:\/\/shop_images\/Group_1006_2x_ddf04703-ee0a-4392-bbee-5c0a1a84e09f.png"
+      }
     }
   },
   "order": [
@@ -133,6 +151,8 @@
     "a3e74df5-c68d-478d-868a-d67bcea6f463",
     "b27b7d1e-ea63-48e6-8e28-352c1263faab",
     "159e9ec2-786d-498f-af34-7d5ffa9693e8",
-    "30e63721-c28a-4038-8c4b-4211ce0b25e7"
+    "30e63721-c28a-4038-8c4b-4211ce0b25e7",
+    "54b763e5-ddd9-4607-8387-12da97eb7b84",
+    "5f659ec3-efb5-4bc7-bc03-f404e6ff7938"
   ]
 }
