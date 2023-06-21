@@ -1,83 +1,201 @@
 <div class="container">
-  <div class="titl text-center pt-6">How It Works</div>
+  <div class="titl text-center pt-6">{{ section.settings.title }}</div>
   <div class="row mb-8 mt-5 mx-auto justify-content-evenly">
-    <div class="col-10 col-md-5 mb-5 mb-md-0 left">
-     <div class="row h-100 after pb-7 pt-4">
-        <div class="col-12 subs text-center pb-3">Subscriptions</div>
+    {% for  block in section.blocks %}  
+    <div class="col-10 col-md-5 mb-5 mb-md-0 {{ block.settings.bg_color }}">
+      <div class="row h-100 after pb-7 pt-4">
+        <div class="col-12 subs text-center pb-3">{{ block.settings.title }}</div>
         <div class="col-4 ">
           <div class="row d-flex justify-content-center pb-3">
-            <img src="{{ 'Group 1501@2x.png' | asset_img_url }}" alt="" style="width: 150px;">
+            <img src="{{ block.settings.image1 | img_url: '100x' }}" alt="" style="width: 150px;">
           </div>
           <div class="row d-flex justify-content-center">
-            <p class="steps text-center">STEP 1</p>
-            <p class="text text-center">Choose Your Subscription Plan</p>
+            <p class="steps text-center {{ block.settings.step_color }}">STEP 1</p>
+            <p class="text text-center">{{ block.settings.step_desc1 }}</p>
           </div>
         </div>
         <div class="col-4">
           <div class="row d-flex justify-content-center pb-3">
-            <img src="{{ 'Group 1502@2x.png' | asset_img_url }}" alt="" style="width: 150px;">
+            <img src="{{ block.settings.image2 | img_url: '100x' }}" alt="" style="width: 150px;">
           </div>
           <div class="row d-flex justify-content-center">
-            <p class="steps text-center">STEP 2</p>
-            <p class="text text-center ">Schedule a Delivery</p>
+            <p class="steps text-center {{ block.settings.step_color }}">STEP 2</p>
+            <p class="text text-center ">{{ block.settings.step_desc2 }}</p>
           </div>
         </div>
         <div class="col-4">
           <div class="row d-flex justify-content-center pb-3">
-            <img src="{{ 'Group 1474@2x.png' | asset_img_url }}" alt="" style="width: 150px;">
+            <img src="{{ block.settings.image3 | img_url: '100x' }}" alt="" style="width: 150px;">
           </div>
           <div class="row d-flex justify-content-center">
-            <p class="steps text-center">STEP 3</p>
-            <p class="text text-center">Build, Learn, and Have Fun at Home!</p>
+            <p class="steps text-center {{ block.settings.step_color }}">STEP 3</p>
+            <p class="text text-center">{{ block.settings.step_desc3 }}</p>
+          </div>
+        </div>
+        <div class="col-12 text-center"
+
+   
+        >
+          <a href="#" class="btn-prime {{ block.settings.button_color }} mb-4">{{ block.settings.button_text }}</a>
+        </div>
+      </div>
+    </div>
+    {% comment %} <div class=" col-10 col-md-5 right">
+      <div class="row after pb-7 pt-4">
+        <div class="col-12 subs text-center pb-3">In-Person</div>
+        <div class="col-4 ">
+          <div class="row d-flex justify-content-center pb-3">
+            <img src="{{ 'Group 1503@2x.png' | asset_img_url }}" alt="" style="width: 150px;">
+          </div>
+          <div class="row d-flex justify-content-center">
+            <p class="steps in text-center">STEP 1</p>
+            <p class="text text-center">Choose Your Activity</p>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="row d-flex justify-content-center pb-3">
+            <img src="{{ 'Group 1504@2x.png' | asset_img_url }}" alt="" style="width: 150px;">
+          </div>
+          <div class="row d-flex justify-content-center">
+            <p class="steps in text-center">STEP 2</p>
+            <p class="text text-center ">Register Online</p>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="row d-flex justify-content-center pb-3">
+            <img src="{{ 'Group 1505@2x.png' | asset_img_url }}" alt="" style="width: 150px;">
+          </div>
+          <div class="row d-flex justify-content-center">
+            <p class="steps in text-center">STEP 3</p>
+            <p class="text text-center">Build, Learn, and Have Fun at The Robot Garage</p>
           </div>
         </div>
         <div class="col-12 text-center">
-          <a href="#" class="btn-prime btn-green mb-4">Get Started</a>
+          <a href="#" class="btn-prime btn-yellow mb-4">Enroll Now</a>
         </div>
-      </div> 
-    </div>
-          <div class=" col-10 col-md-5 right">
-            <div class="row after pb-7 pt-4">
-                <div class="col-12 subs text-center pb-3">In-Person</div>
-                <div class="col-4 ">
-                  <div class="row d-flex justify-content-center pb-3">
-                    <img src="{{ 'Group 1503@2x.png' | asset_img_url }}" alt="" style="width: 150px;">
-                  </div>
-                  <div class="row d-flex justify-content-center">
-                    <p class="steps in text-center">STEP 1</p>
-                    <p class="text text-center">Choose Your Activity</p>
-                  </div>
-                </div>
-                <div class="col-4">
-                  <div class="row d-flex justify-content-center pb-3">
-                    <img src="{{ 'Group 1504@2x.png' | asset_img_url }}" alt="" style="width: 150px;">
-                  </div>
-                  <div class="row d-flex justify-content-center">
-                    <p class="steps in text-center">STEP 2</p>
-                    <p class="text text-center ">Register Online</p>
-                  </div>
-                </div>
-                <div class="col-4">
-                  <div class="row d-flex justify-content-center pb-3">
-                    <img src="{{ 'Group 1505@2x.png' | asset_img_url }}" alt="" style="width: 150px;">
-                  </div>
-                  <div class="row d-flex justify-content-center">
-                    <p class="steps in text-center">STEP 3</p>
-                    <p class="text text-center">Build, Learn, and Have Fun at The Robot Garage</p>
-                  </div>
-                </div>
-                <div class="col-12 text-center">
-                  <a href="#" class="btn-prime btn-yellow mb-4">Enroll Now</a>
-                </div>
-              </div> 
-          </div> 
+    
+      </div>
+  
+    </div> {% endcomment %}
+{% endfor %}
+  </div>
+
+  
 
 {% schema %}
 {
   "name": "Detail Box Section",
   "tag": "section",
   "class": "index-detal-box",
-  "settings": [],
+  "settings": [
+    {
+        "type": "text",
+        "id": "title",
+        "label": "Title",
+        "default": "Main Title"
+
+    }
+  ],
+  "blocks": [
+    {
+        "type": "details_block",
+        "name": "Detail Block",
+        "settings": [
+            {
+                "type": "text",
+                "id": "title",
+                "label": "Box Title"
+            },
+            {
+                "type": "image_picker",
+                "id": "image1",
+                "label": "First Image"
+            },
+            {
+                "type": "image_picker",
+                "id": "image2",
+                "label": "Second Image"
+            },
+            {
+                "type": "image_picker",
+                "id": "image3",
+                "label": "Third Image"
+            },
+            {
+                "type": "select",
+                "id": "bg_color",
+                "label": "Background Color Picker",
+                "options":[
+                    {
+                        "label": "Ivory",
+                        "value": "ivory"
+                        
+                    },
+                    {
+                        "label": "Floral White",
+                        "value": "floral_white"
+                    }
+                ]
+
+            },
+            {
+                "type": "select",
+                "id": "step_color",
+                "label": "Steps Color",
+                "options": [
+                    {
+                        "label": "Green",
+                        "value": "step_green"
+                    },
+                    {
+                        "label": "Yellow",
+                        "value": "step_yellow"
+                    }
+                ]
+            },
+            {
+                "type": "select",
+                "id": "button_color",
+                "label": "Button Color",
+                "options": [
+                    {
+                        "label": "Green",
+                        "value" :"btn-green"
+                    },
+                    {
+                        "label": "Red",
+                        "value": "btn-red"
+                    },
+                    {
+                        "label": "Yellow",
+                        "value": "btn-yellow"
+                    }
+                ]
+            },
+            {
+                "type": "text",
+                "id": "button_text",
+                "label": "Button Text",
+                "default": "Visit Us"
+            },
+            {
+                "type": "text",
+                "id": "step_desc1",
+                "label": "Steps Description 1"
+            },
+            {
+                "type": "text",
+                "id": "step_desc2",
+                "label": "Steps Description 2"
+            },
+            {
+                "type": "text",
+                "id": "step_desc3",
+                "label": "Steps Description 3" 
+            }
+        ]
+    }
+  ],
   "presets": [
     {
       "name": "Detail Box",

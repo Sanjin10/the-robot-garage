@@ -5,6 +5,7 @@
 	width: 100%;
 	border-bottom: solid 1px #f0f0f1;
 }
+
 .haver {
 	color: #3c3c3e;
 	font-family: 'Figtree', sans-serif;
@@ -38,19 +39,32 @@
 	opacity: 1;
 	backdrop-filter: blur(3px);
 	-webkit-backdrop-filter: blur(3px);
-	margin-left: 45px;
 }
 .text-wrapper h3 {
 	font-family: 'Quicksand', sans-serif;
 	color: #ffffff;
 	font-weight: bold;
 	font-size: 42px;
+	margin-bottom: 1rem;
 }
 .text-wrapper p {
 	font-family: 'Figtree', sans-serif;
 	color: #ffffff;
 	font-size: 22px;
 	font-weight: 400;
+	margin-bottom: 3rem;
+}
+.btn-prime::before {
+	border-radius: 40px;
+	border: 1px solid white;
+	background: none;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 1000;
+	position: absolute;
+	content: '';
 }
 
 .btn-prime {
@@ -59,8 +73,6 @@
 	font-weight: 400;
 	color: white;
 	background: none;
-	border-radius: 40px;
-	border: 1px solid white;
 	top: 0;
 	left: 0;
 	right: 0;
@@ -99,7 +111,6 @@
 	font-weight: bold;
 	font-size: 40px;
 	color: #3c3c3e;
-	text-transform: capitalize;
 }
 .left {
 	background-color: #fdffea;
@@ -142,9 +153,11 @@
 	z-index: -1;
 	border: 1px solid #929293;
 }
-.btn-prime.btn-red {
+.btn-prime.btn-red::before {
 	border: 1px solid #3c3c3e;
-	color: #3c3c3e;
+}
+.btn-prime.btn-red {
+	color: #f0f0f1;
 }
 .btn-prime.btn-red::after {
 	background-color: #d92516;
@@ -153,8 +166,10 @@
 	border: 1px solid #3c3c3e;
 	color: #fdffea;
 }
-.btn-prime.btn-green {
+.btn-prime.btn-green::before {
 	border: 1px solid #3c3c3e;
+}
+.btn-prime.btn-green {
 	color: #3c3c3e;
 }
 .btn-prime.btn-green:after {
@@ -163,8 +178,10 @@
 .right {
 	background-color: #fffced;
 }
-.btn-prime.btn-yellow {
+.btn-prime.btn-yellow::before {
 	border: 1px solid #3c3c3e;
+}
+.btn-prime.btn-yellow {
 	color: #3c3c3e;
 }
 .btn-prime.btn-yellow::after {
@@ -247,7 +264,7 @@
 	margin: 0;
 	letter-spacing: 0;
 }
-.bundles {
+.bundles-green {
 	color: #3c3c3e;
 	font-family: 'Figtree', sans-serif;
 	font-size: 15px;
@@ -256,11 +273,29 @@
 .bundles i {
 	transition: margin 280ms ease-in-out;
 }
-.bundles:hover {
-	color: #598b29;
-}
 .bundles:hover > i {
 	margin-left: 15px;
+}
+.bundles-green:hover {
+	color: #598b29;
+}
+.bundles-red {
+	color: #3c3c3e;
+	font-family: 'Figtree', sans-serif;
+	font-size: 15px;
+	font-weight: 600;
+}
+.bundles-red:hover {
+	color: #d92516;
+}
+.bundles-yellow {
+	color: #3c3c3e;
+	font-family: 'Figtree', sans-serif;
+	font-size: 15px;
+	font-weight: 600;
+}
+.bundles-yellow:hover {
+	color: #fed409;
 }
 .ticks {
 	font-family: 'Figtree', sans-serif;
@@ -293,6 +328,7 @@
 
 .swiper-col {
 	background-color: #fffced;
+	cursor: grab;
 }
 .swiper-slide-active > .container > .row > .swiper-col {
 	width: auto;
@@ -325,7 +361,7 @@
 	background-color: #fffced;
 	right: 12%;
 	top: 0;
-	transform: translateY(50%);
+	transform: translateY(45%);
 	box-shadow: 5px 15px 20px rgb(0 0 0 / 0.2);
 }
 
@@ -345,14 +381,21 @@
 	color: #3c3c3e;
 	letter-spacing: 0;
 }
-
-.round-btn {
-	position: relative;
+.round-btn::before {
 	border: 1px solid #3c3c3e;
 	border-radius: 50%;
-	height: 86px;
-	width: 86px;
-	top: 0px;
+	position: absolute;
+	content: '';
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+.round-btn {
+	position: relative;
+	height: 90px;
+	width: 90px;
+	top: 0;
 	left: 0;
 	right: 0;
 	bottom: 0;
@@ -391,15 +434,48 @@
 	color: #3c3c3e;
 	letter-spacing: 0;
 }
-.swiper-button-prev {
-	border: 1px solid #3c3c3e;
-	border-radius: 0;
-	background-color: #ffffff;
-	color: #3c3c3e;
+.swiper-button-prev::after {
+	display: none;
 }
 .swiper-button-next {
-	border: 1px solid #3c3c3e;
-	border-radius: 0;
-	background-color: #ffffff;
-	color: #3c3c3e;
+}
+.grey {
+	background-color: #f7f7f7;
+}
+.dark {
+	background-color: #3c3c3e;
+	color: #ffffff;
+}
+.dark p {
+	font-size: 12px;
+	letter-spacing: 0;
+}
+
+.red {
+	background-color: #d92516;
+	color: #f7f7f7;
+}
+.green {
+	background-color: #bfce18;
+}
+.yellow {
+	background-color: #fed409;
+}
+.swiper-button-next:after {
+	display: none;
+}
+.swiper-button-prev {
+	transform: rotate(180deg);
+}
+.ivory {
+	background-color: #fdffea;
+}
+.floral_white {
+	background-color: #fffced;
+}
+.step_green {
+	color: #598b29;
+}
+.step_yellow {
+	color: #d59c04;
 }

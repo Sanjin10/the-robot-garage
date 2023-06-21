@@ -1,21 +1,20 @@
 <div class="container position-relative pt-5 mb-5 ">
   <div class="row">
     <div class="videobox pb-8 col-12 col-lg-8 col-md-8">
-      <video src="../assets/aboutus.mp4" class="w-100" loop></video>
+      <img class="ms-10" src="{{ section.settings.image | img_url: 'x500' }}"></img>
     </div>
     <div class="col-12 col-lg-3 col-md-3 d-flex">
       <div class="my-auto background-content">
-        <h3 class="pb-2">We’ve inspired over 100,000 students</h3>
+        <h3 class="pb-2">{{ section.settings.title }}</h3>
         <p class="pb-4">
-          The Robot Garage was founded in 2011 to teach engineering, coding, and robotics to kids. Our vision is to
-          create an “aha” moment every day for every child.
+         {{ section.settings.text }}
         </p>
         <a href="#" class="btn-prime btn-yellow" id="aboutus">About Us</a>
       </div>
     </div>
   </div>
   <div class="background col-12 col-lg-8 h-100 col-md-8">
-    <img src="../assets/bekgraund.jpg" style="width: 100%;">
+    <img src="https://cdn.shopify.com/s/files/1/0765/4817/8225/files/Mask_Group_13.png?v=1687163457" style="width: 100%;">
   </div>
 </div>
 
@@ -24,7 +23,25 @@
   "name": "About Us Section",
   "tag": "section",
   "class": "index-about-us",
-  "settings": [],
+  "settings": [
+    {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Display an image"
+    },
+    {
+        "type": "text",
+        "id": "title",
+        "label": "Section Header",
+        "default": "What do we do?"
+    },
+    {
+        "type": "text",
+        "id": "text",
+        "label": "Text",
+        "default": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, vero nobis? Maxime dolores iste, sunt quia aut, molestiae, voluptate quisquam nulla eum suscipit laborum. Saepe odit in ducimus hic sed."
+    }
+  ],
   "presets": [
     {
       "name": "About Us",
