@@ -67,7 +67,7 @@
           "type": "plans_block",
           "settings": {
             "accent_color": "green",
-            "cardage_text": "",
+            "cardage_text": "Ages 4-6",
             "title": "Young Engineers",
             "image": "shopify:\/\/shop_images\/Robot_Garage_16x9-11_2x_b5032fd0-7459-49d5-b124-3c9fe2225889.png",
             "price": "$79\/mo",
@@ -81,7 +81,7 @@
           "type": "plans_block",
           "settings": {
             "accent_color": "red",
-            "cardage_text": "",
+            "cardage_text": "Grades 1-4",
             "title": "Robot Academy Jr.",
             "image": "shopify:\/\/shop_images\/Robot_Garage_16x9-17_2x_e4993387-2c25-4820-a512-7dabf2aa46a8.png",
             "price": "$79\/mo",
@@ -95,7 +95,7 @@
           "type": "plans_block",
           "settings": {
             "accent_color": "yellow",
-            "cardage_text": "",
+            "cardage_text": "Grades 3-5",
             "title": "Video Game Design",
             "image": "shopify:\/\/shop_images\/6c8e4f_a7a95216f3714269a7ce949e5d0bd942_mv2_2x_d38d6287-7581-47d6-bb7b-0320d2687fe1.png",
             "price": "$29\/mo",
@@ -141,7 +141,10 @@
         "icons": "shopify:\/\/shop_images\/Component_30_3_2x_f7a04ced-2244-40a4-98b4-26635f0e9973.png",
         "icons2": "shopify:\/\/shop_images\/Group_1004_2x_6d2ccd1b-6c03-4f31-8bd2-24001434aa8a.png",
         "icons3": "shopify:\/\/shop_images\/Group_1005_2x_d9400db2-a2f7-4104-a9b0-252ab9a196a2.png",
-        "icons4": "shopify:\/\/shop_images\/Group_1006_2x_ddf04703-ee0a-4392-bbee-5c0a1a84e09f.png"
+        "icons4": "shopify:\/\/shop_images\/Group_1006_2x_ddf04703-ee0a-4392-bbee-5c0a1a84e09f.png",
+        "title": "",
+        "title2": "",
+        "title3": ""
       }
     }
   },
