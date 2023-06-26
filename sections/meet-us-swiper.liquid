@@ -1,4 +1,4 @@
-<div class="container position-relative">
+<div class="position-relative">
   <div class="row justify-content-end mt-5 mb-5">
     <div class="col-8 bekra">
       <img
@@ -8,13 +8,10 @@
     </div>
     <div class="col-5 pt-1 me-5">
       <h4 class="background-text">
-        We believe that every child has the potential to improve the world if we nurture their self-esteem, creativity,
-        and problem-solving skills.
+        {{ section.settings.title }}
       </h4>
       <p class="mt-2 mb-5">
-        Our team is made up of those who love working with people as much as they love working with technology. We
-        happen to have great STEM programs and expertise in our area, but we are a customer service company first. We
-        love what we do!
+        {{ section.settings.text }}
       </p>
       <a class="btn-prime btn-yellow mt-5" href="">Meet The Team</a>
     </div>
@@ -23,7 +20,7 @@
         <div class="swiper-wrapper">
           {% for i in (0..9) %}
             <div class="swiper-slide">
-              <img src="../assets/kid.png" alt="">
+              <img src="{{ section.settings.image | img_url: '390x350' }}" alt="">
             </div>
           {% endfor %}
         </div>
@@ -52,7 +49,25 @@
   "name": "Second Swiper Section",
   "tag": "section",
   "class": "index-swiper-meet-us",
-  "settings": [],
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Main Text",
+      "default": "Exercitationem et perspiciatis voluptatum, hic, quod libero sapiente rem itaque numquam a soluta similique reprehenderit provident ab modi aliquam doloribus repellat aut."
+    },
+    {
+      "type": "text",
+      "id": "text",
+      "label": "Description",
+      "default": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio quas quis error dolorem? Sequi cupiditate eligendi libero perferendis cumque accusantium. Quam labore et aliquam repellendus!"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Swiper photo"
+    }
+  ],
   "presets": [
     {
       "name": "Meet Us Swiper",
