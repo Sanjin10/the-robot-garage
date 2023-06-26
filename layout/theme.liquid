@@ -7,34 +7,50 @@
     <meta name="theme-color" content="">
     <link rel="canonical" href="{{ canonical_url }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    >
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
-    >
-    <script src="https://kit.fontawesome.com/370750ffaf.js" crossorigin="anonymous" async></script>
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+    <script
+      src="https://kit.fontawesome.com/370750ffaf.js"
+      crossorigin="anonymous"
+      async></script>
     <script src="../assets/swiper.js" type="module"></script>
     <script src="../assets/swiper1.js" type="module"></script>
+    <script src="../assets/swiper2.js" type="module"></script>
 
     {%- render 'preload-script' -%}
 
     {%- comment -%}Favicon Icon{%- endcomment -%}
     {%- if settings.favicon != blank -%}
-      <link rel="icon" type="image/png" href="{{ settings.favicon | image_url: width: 32, height: 32 }}">
+      <link
+        rel="icon"
+        type="image/png"
+        href="{{ settings.favicon | image_url: width: 32, height: 32 }}">
     {%- endif -%}
 
     {%- comment -%}Pre-connects{%- endcomment -%}
-    <link rel="preconnect" href="https://cdn.shopify.com" crossorigin>
-    <link rel="preconnect" href="https://monorail-edge.shopifysvc.com" crossorigin>
+    <link
+      rel="preconnect"
+      href="https://cdn.shopify.com"
+      crossorigin>
+    <link
+      rel="preconnect"
+      href="https://monorail-edge.shopifysvc.com"
+      crossorigin>
 
     <title>{{ page_title }}</title>
 
@@ -44,9 +60,11 @@
 
     {% comment %}theme-check-disable LiquidTag{% endcomment %}
     {%- render 'meta-tags' -%}
-    {% capture CFH %}{{ content_for_header }}{% endcapture %}
+    {% capture CFH %}
+      {{ content_for_header }}{% endcapture %}
     {% if template.name != 'product' and template.name != 'cart' %}
-      {% capture CFH %}{{ CFH | replace: 'data-source-attribution="shopify.dynamic-checkout"', 'data-source-attribution="shopify.dynamic-checkout" type="text/gzip"' }}{% endcapture %}
+      {% capture CFH %}
+        {{ CFH | replace: 'data-source-attribution="shopify.dynamic-checkout"', 'data-source-attribution="shopify.dynamic-checkout" type="text/gzip"' }}{% endcapture %}
     {% endif %}
     {% comment %}theme-check-enable LiquidTag{% endcomment %}
     {{ CFH }}
@@ -62,8 +80,7 @@
     <a
       class="skip-to-content-link button visually-hidden-skip"
       href="#MainContent"
-      title="{{ "accessibility.skip_to_text" | t }}"
-    >
+      title="{{ "accessibility.skip_to_text" | t }}">
       {{ 'accessibility.skip_to_text' | t }}
     </a>
 
@@ -77,7 +94,11 @@
 
     {%- section 'newsletter' -%}
 
-    <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
+    <main
+      id="MainContent"
+      class="content-for-layout focus-none"
+      role="main"
+      tabindex="-1">
       {{ content_for_layout }}
     </main>
 
@@ -86,7 +107,7 @@
     {% endif %}
 
     {% if settings.enable_quickshop %}
-      <quick-shop> </quick-shop>
+      <quick-shop></quick-shop>
     {% endif %}
 
     <modal-dialog id="PopupModal-video">
@@ -98,8 +119,7 @@
                 class="btn p-2 close-quickshop"
                 type="button"
                 id="ModalClose-video"
-                aria-label="{{ 'sections.video-with-text.close_video' | t }}"
-              >
+                aria-label="{{ 'sections.video-with-text.close_video' | t }}">
                 <span class="icon-close"></span>
               </button>
             </div>
@@ -138,81 +158,43 @@
     </ul>
 
     <script type="text/javascript">
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
+
+
+
       window.globalVariables = {
-        cart: {{ cart | json }},
-        product: {%- if template.name == 'product' -%}{{ product | json }}{%- else -%}{}{%- endif -%},
-        collection: {%- if template.name == 'collection' -%}{
-          all_products_count: {{ collection.all_products_count }},
-          products: {{ collection.products | json }}
+      cart: {{ cart | json }},
+      product:
+      {%- if template.name == 'product' -%}
+        {{ product | json }}{%- else -%}{}{%- endif -%},
+      collection:
+      {%- if template.name == 'collection' -%}{
+        all_products_count: {{ collection.all_products_count }},
+        products: {{ collection.products | json }}
         }{%- else -%}{}{%- endif -%},
-        template: '{{ template.name }}',
-        templateSuffix: '{{ template.suffix }}',
-        cart_drawer: {{ settings.enable_cart_drawer | json }},
-        money_format: {{ shop.money_format | json }}
+      template: '{{ template.name }}',
+      templateSuffix: '{{ template.suffix }}',
+      cart_drawer: {{ settings.enable_cart_drawer | json }},
+      money_format: {{ shop.money_format | json }}
       };
-
       window.routes = {
-        predictive_searh: '{{ routes.search_url }}/suggest.json',
-        cart_fetch_url: '{{ routes.cart_url }}',
-        cart_add_url: '{{ routes.cart_add_url }}',
-        cart_change_url: '{{ routes.cart_change_url }}',
-        cart_update_url: '{{ routes.cart_update_url }}'
+                    predictive_searh: '{{ routes.search_url }}/suggest.json',
+      cart_fetch_url: '{{ routes.cart_url }}',
+      cart_add_url: '{{ routes.cart_add_url }}',
+      cart_change_url: '{{ routes.cart_change_url }}',
+      cart_update_url: '{{ routes.cart_update_url }}'
       };
-
-      window.cartStrings = {
-        error: `{{ 'sections.cart.cart_error' | t }}`,
-        quantityError: `{{ 'sections.cart.cart_quantity_error_html' | t }}`
+            
+                  window.cartStrings = {
+                    error: `{{ 'sections.cart.cart_error' | t }}`,
+      quantityError: `{{ 'sections.cart.cart_quantity_error_html' | t }}`
       }
-
-      window.variantStrings = {
-        addToCart: `{{ 'products.product.add_to_cart' | t }}`,
-        upsellAddText: `{{ 'products.product.upsell_add' | t }}`,
-        soldOut: `{{ 'products.product.sold_out' | t }}`,
-        unavailable: `{{ 'products.product.unavailable' | t }}`,
+            
+                  window.variantStrings = {
+                    addToCart: `{{ 'products.product.add_to_cart' | t }}`,
+      upsellAddText: `{{ 'products.product.upsell_add' | t }}`,
+      soldOut: `{{ 'products.product.sold_out' | t }}`,
+      unavailable: `{{ 'products.product.unavailable' | t }}`,
       }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -221,21 +203,28 @@
     {% if settings.enable_login_helper %}
       <script type="application/json" data-login-json>
         {
-            "settings": {
-              "type": "default",
-              "enable": {% if settings.enable_login_helper %}true{% else %}false{% endif %},
-              "account_not_found": "{% if settings.account_not_found %}{{ settings.account_not_found | escape }}{% else %}null{% endif %}",
-              "account_enable": "{% if settings.account_enable %}{{ settings.account_enable | escape }}{% else %}null{% endif %}",
-              "account_disable": "{% if settings.account_disable %}{{ settings.account_disable | escape }}{% else %}null{% endif %}",
-              "account_invited": "{% if settings.account_invited %}{{ settings.account_invited | escape }}{% else %}null{% endif %}",
-              "account_declined": "{% if settings.account_declined %}{{ settings.account_declined | escape }}{% else %}null{% endif %}"
-            },
-            "sender_email": {% if settings.sender_email %}"{{ settings.sender_email | escape }}"{% else %}null{% endif %},
-            "status": null,
-            "message": null,
-            "customerEmail": "{{ customer.email }}",
-            "isLoginFormVisible": true
-        }
+        "settings": {
+                              "type": "default",
+                              "enable":
+        {% if settings.enable_login_helper %}true{% else %}false{% endif %},
+        "account_not_found": "{% if settings.account_not_found %}
+          {{ settings.account_not_found | escape }}{% else %}null{% endif %}",
+        "account_enable": "{% if settings.account_enable %}
+          {{ settings.account_enable | escape }}{% else %}null{% endif %}",
+        "account_disable": "{% if settings.account_disable %}
+          {{ settings.account_disable | escape }}{% else %}null{% endif %}",
+        "account_invited": "{% if settings.account_invited %}
+          {{ settings.account_invited | escape }}{% else %}null{% endif %}",
+        "account_declined": "{% if settings.account_declined %}
+          {{ settings.account_declined | escape }}{% else %}null{% endif %}"
+        },
+                            "sender_email":
+        {% if settings.sender_email %}"{{ settings.sender_email | escape }}"{% else %}null{% endif %},
+        "status": null,
+                            "message": null,
+                            "customerEmail": "{{ customer.email }}",
+        "isLoginFormVisible": true
+                        }
       </script>
     {% endif %}
 
@@ -246,26 +235,26 @@
     {% if template.name != 'product' and template.name != 'cart' %}
       <script type="text/javascript" defer>
         (function manageDynamicCheckoutJS() {
-          let checkoutBtn = document.querySelector('#additional-checkout-buttons');
-          if (checkoutBtn != null) {
-            const onIntersection = (entries) => {
-              for (const entry of entries) {
-                if (entry.isIntersecting) {
-                  let checkoutScript = document.createElement('script');
-                  let paymentTarget = document.querySelector('[data-source-attribution="shopify.dynamic-checkout"]');
-                  checkoutScript.integrity = paymentTarget.getAttribute('integrity');
-                  checkoutScript.setAttribute('data-source-attribution', 'shopify.dynamic-checkout');
-                  checkoutScript.src = paymentTarget.getAttribute('src');
-                  checkoutScript.setAttribute('crossorigin', 'anonymous');
-                  document.head.appendChild(checkoutScript);
-                  observer.disconnect();
-                }
-              }
-            };
-            const observer = new IntersectionObserver(onIntersection);
-            observer.observe(checkoutBtn);
-          }
-        })();
+        let checkoutBtn = document.querySelector('#additional-checkout-buttons');
+                          if (checkoutBtn != null) {
+                            const onIntersection = (entries) => {
+                              for (const entry of entries) {
+                                if (entry.isIntersecting) {
+                                  let checkoutScript = document.createElement('script');
+                                  let paymentTarget = document.querySelector('[data-source-attribution="shopify.dynamic-checkout"]');
+                                  checkoutScript.integrity = paymentTarget.getAttribute('integrity');
+                                  checkoutScript.setAttribute('data-source-attribution', 'shopify.dynamic-checkout');
+                                  checkoutScript.src = paymentTarget.getAttribute('src');
+                                  checkoutScript.setAttribute('crossorigin', 'anonymous');
+                                  document.head.appendChild(checkoutScript);
+                                  observer.disconnect();
+                                }
+                              }
+                            };
+                            const observer = new IntersectionObserver(onIntersection);
+                            observer.observe(checkoutBtn);
+                          }
+                        })();
       </script>
     {% endif %}
   </body>

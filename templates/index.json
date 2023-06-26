@@ -119,6 +119,11 @@
       "settings": {
       }
     },
+    "1ea0067b-b740-449e-acf0-4f7cf411ca99": {
+      "type": "meet-us-swiper",
+      "settings": {
+      }
+    },
     "30e63721-c28a-4038-8c4b-4211ce0b25e7": {
       "type": "live-meet-up",
       "settings": {
@@ -154,6 +159,7 @@
     "a3e74df5-c68d-478d-868a-d67bcea6f463",
     "b27b7d1e-ea63-48e6-8e28-352c1263faab",
     "159e9ec2-786d-498f-af34-7d5ffa9693e8",
+    "1ea0067b-b740-449e-acf0-4f7cf411ca99",
     "30e63721-c28a-4038-8c4b-4211ce0b25e7",
     "54b763e5-ddd9-4607-8387-12da97eb7b84",
     "5f659ec3-efb5-4bc7-bc03-f404e6ff7938"

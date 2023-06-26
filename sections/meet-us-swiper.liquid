@@ -1,4 +1,51 @@
-<div class="container"></div>
+<div class="container position-relative">
+  <div class="row justify-content-end mt-5 mb-5">
+    <div class="col-8 bekra">
+      <img
+        src="https://cdn.shopify.com/s/files/1/0765/4817/8225/files/Mask_Group_5_2x_7dd98382-4c50-42ee-89b4-51d14c05bcf7.png?v=1687528556"
+        alt=""
+      >
+    </div>
+    <div class="col-5 pt-1 me-5">
+      <h4 class="background-text">
+        We believe that every child has the potential to improve the world if we nurture their self-esteem, creativity,
+        and problem-solving skills.
+      </h4>
+      <p class="mt-2 mb-5">
+        Our team is made up of those who love working with people as much as they love working with technology. We
+        happen to have great STEM programs and expertise in our area, but we are a customer service company first. We
+        love what we do!
+      </p>
+      <a class="btn-prime btn-yellow mt-5" href="">Meet The Team</a>
+    </div>
+    <div class="col-6 overflow-hidden">
+      <div class="swiper2">
+        <div class="swiper-wrapper">
+          {% for i in (0..9) %}
+            <div class="swiper-slide">
+              <img src="../assets/kid.png" alt="">
+            </div>
+          {% endfor %}
+        </div>
+
+        <div class="arrow-r">
+          <img
+            src="../assets/arroww.png"
+            alt=""
+            class="arrow-right-v2"
+          >
+        </div>
+        <div class="arrow-l">
+          <img
+            src="../assets/arroww.png"
+            alt=""
+            class="arrow-left-v2"
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 {% schema %}
 {

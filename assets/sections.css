@@ -365,7 +365,9 @@
 .swiper-slide-prev > .container > .row {
 	justify-content: flex-end;
 }
-
+.swiper {
+	margin-bottom: 4rem;
+}
 .button-box {
 	position: absolute;
 	background-color: #fffced;
@@ -520,7 +522,7 @@
 	z-index: 1000;
 	top: 0;
 	left: 0;
-	transform: translate(-90%, 660%);
+	transform: translate(30%, 660%);
 }
 .boja {
 	background-color: #f7f7f7;
@@ -548,7 +550,7 @@
 .input-group {
 	border: 1px solid #3c3c3e;
 	border-radius: 25px;
-	width: 27rem;
+	/* width: 27rem; */
 	background: none;
 }
 .form-control {
@@ -574,4 +576,36 @@
 	> :not(:last-child):not(.dropdown-toggle):not(.dropdown-menu) {
 	border: none;
 	background: none;
+}
+.bekra {
+	position: absolute;
+	right: 30%;
+	bottom: -12%;
+	z-index: -1;
+}
+.swiper2 {
+overflow: visible;
+cursor: grab;
+}
+.bekra > img {
+	width: 100%;
+	height: 24rem;
+}
+.arrow-right-v2 {
+position: absolute;
+top: 89%;
+right: 51%;
+z-index: 1;
+}
+.arrow-left-v2 {
+	position: absolute;
+	top: 89%;
+	right: 54%;
+	z-index: 1;
+	transform: rotate(180deg);
+}
+.background-text {
+	font-size: 28px;
+	font-family: 'Quicksand', sans-serif;
+	font-weight: 600;
 }
