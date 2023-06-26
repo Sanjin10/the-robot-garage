@@ -13,7 +13,7 @@
       <p class="mt-2 mb-5">
         {{ section.settings.text }}
       </p>
-      <a class="btn-prime btn-yellow mt-5" href="">Meet The Team</a>
+      <a class=" btn-prime {{ section.settings.button }} mt-5" href="">Meet The Team</a>
     </div>
     <div class="col-6 overflow-hidden">
       <div class="swiper2">
@@ -66,6 +66,25 @@
       "type": "image_picker",
       "id": "image",
       "label": "Swiper photo"
+    },
+    {
+      "type": "select",
+      "id": "button",
+      "label": "Button Style",
+      "options": [
+        {
+          "label": "Green",
+          "value": "btn-green"
+        },
+        {
+          "label": "Red",
+          "value": "btn-red"
+        },
+        {
+          "label": "Yellow",
+          "value": "btn-yellow"
+        }
+      ]
     }
   ],
   "presets": [
